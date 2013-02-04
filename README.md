@@ -49,9 +49,9 @@ from django.db.models import Sum
 # and calculate the total sum of each donor's transaction,
 # sort by the highest total donors and show the top 10
 
-top_donors = Donation.objects.values('donor_name')
-                .order_by('donor_name')
-                .annotate(total=Sum('transaction_value'))
+top_donors = Donation.objects.values('donor_name') \
+                .order_by('donor_name') \
+                .annotate(total=Sum('transaction_value')) \
                 .order_by('-total')[:10]
 
 for donor in top_donors:

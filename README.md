@@ -74,7 +74,7 @@ Furama Pty Ltd: 2088776
 Macquarie Bank: 1937840
 ```
 
-```
+```python
 # show individual transactions from the top donor
 # reads: find me all donations from this particular name,
 # (below we display the value of the transactions and the dates)

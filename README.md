@@ -1,4 +1,4 @@
-Australian Federal Election Donations (AFED) Blank Django App
+Australian Federal Electoral Donations (AFED) Blank Django App
 ==============
 
 Base django application pre-loaded with the Australian Electoral Commission political donation data. Ready for apps to be coded around it to highlight points of interest.

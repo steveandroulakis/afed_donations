@@ -17,7 +17,7 @@ class Donation(models.Model):
     recipient_state = models.CharField(max_length=255, null=True)
     recipient_postcode = models.FloatField(null=True)
     transaction_date = models.DateField(null=True)
-    transaction_value = models.CharField(max_length=255, null=True)
+    transaction_value = models.FloatField(null=True)
     period = models.CharField(max_length=255, null=True)
     record_number = models.FloatField(null=True)
     source = models.CharField(max_length=255, null=True)

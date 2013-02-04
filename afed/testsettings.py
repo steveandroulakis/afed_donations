@@ -11,6 +11,4 @@ DATABASES = {
     }
 }
 
-INSTALLED_APPS = ['afed.donations', 'south']
-ROOT_URLCONF = ['afed.donations.urls']
 USE_TZ = True

@@ -107,4 +107,12 @@ Cormack Foundation Pty Ltd: 1000000 on 2006-03-23
 ```
 
 ## Notes:
-A file called buildout-prod.cfg can be used in place of bin/buildout -v (use bin/buildout -v -c buildout-prod.cfg) to run the application on a MySQL server instead of the default SQLite which may prove slow. Requires a MySQL server installed and a settings.py created in the afed/ directory with the relevant MySQL database credentials within.
+A file called buildout-prod.cfg can be used in place of bin/buildout -v (use bin/buildout -v -c buildout-prod.cfg) to run the application on a MySQL server instead of the default SQLite which may prove slow.
+
+Run bin/django collectstatic after running syncdb. Then run bin/supervisord to start the server (on nginx).
+
+Requires a MySQL server installed and a settings.py created in the afed/ directory with the relevant MySQL database credentials within.
+
+Also requires packages for python dev, mysql libraries.
+
+

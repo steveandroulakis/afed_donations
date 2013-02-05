@@ -1,4 +1,4 @@
-Australian Federal Election Donations (AFED) Blank Django App
+Australian Federal Electoral Donations (AFED) Blank Django App
 ==============
 
 Base django application pre-loaded with the Australian Electoral Commission political donation data. Ready for apps to be coded around it to highlight points of interest.
@@ -46,7 +46,7 @@ from django.db.models import Sum
 # get top 10 donors by total overall donation
 # reads: from all donors by name,
 # get me a list sorted by the donor name,
-# and calculate the total sum of each donor's transaction,
+# and calculate the total sum of each donor's transactions,
 # sort by the highest total donors and show the top 10
 
 top_donors = Donation.objects.values('donor_name') \
@@ -74,7 +74,7 @@ Furama Pty Ltd: 2088776
 Macquarie Bank: 1937840
 ```
 
-```
+```python
 # show individual transactions from the top donor
 # reads: find me all donations from this particular name,
 # (below we display the value of the transactions and the dates)
@@ -107,4 +107,12 @@ Cormack Foundation Pty Ltd: 1000000 on 2006-03-23
 ```
 
 ## Notes:
-A file called buildout-prod.cfg can be used in place of bin/buildout -v (use bin/buildout -v -c buildout-prod.cfg) to run the application on a MySQL server instead of the default SQLite which may prove slow. Requires a MySQL server installed and a settings.py created in the afed/ directory with the relevant MySQL database credentials within.
+A file called buildout-prod.cfg can be used in place of bin/buildout -v (use bin/buildout -v -c buildout-prod.cfg) to run the application on a MySQL server instead of the default SQLite which may prove slow.
+
+Run bin/django collectstatic after running syncdb. Then run bin/supervisord to start the server (on nginx).
+
+Requires a MySQL server installed and a settings.py created in the afed/ directory with the relevant MySQL database credentials within.
+
+Also requires packages for python dev, mysql libraries.
+
+

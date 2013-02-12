@@ -20,7 +20,7 @@ git clone https://github.com/steveandroulakis/afed_donations.git
 
 cd afed_donations/
 
-python bootstrap.py
+python bootstrap.py -v 1.7.0
 
 bin/buildout -v
 
